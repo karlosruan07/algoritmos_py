@@ -1,4 +1,5 @@
-#este programa mostra como usar uma função de soma dentro de uma classe para ser importada posteriomente.
+
+#este programa tem uma classe principal que possue métodos que são importados e usados em um outro programa ao lado.
 
 class somar:
     def __init__(self, valor1, valor2):
@@ -11,11 +12,16 @@ class somar:
     def mostra_sub(self):
         print('A subtração entre esses valores é : ',self.valor1 - self.valor2)
         
-    def mostra_div_frac(self):
-        print('A divisão fracionada entre esses valores é : ',self.valor1 / self.valor2)
-        
     def mostra_mult(self):
         print('A multiplicação entre esses valores é : ',self.valor1 * self.valor2)
+    
+    
+    def mostra_div_frac(self):
+        try:
+            print('A divisão fracionada entre esses valores é : ',self.valor1 / self.valor2)
+        except:
+            print('Não é possivel por zero. ')
+    
         
     def mostrar_div_int(self):
         print('A divisão inteira entre esses valores é : ',self.valor1 // self.valor2)
